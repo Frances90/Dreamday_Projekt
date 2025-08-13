@@ -1,0 +1,9 @@
+:root {
+    --text_white: #ffffff;
+    --text_black: #2c2533;
+    --regular_lila: #9f7ab0;
+    --regular_lila_hell: #e8d3f2;
+    --regular_lila_dunkel: #4a4058;
+    --regular_lila_sehr_hell: rgba(15, 15, 15, 0.5);
+    --grey_transparent: #333333;
+}
