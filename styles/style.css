@@ -5,3 +5,180 @@
     margin: 0px;
     padding: 0px;
 }
+/* Header css */
+h1, h2, h3{
+    color: var(--regular_lila)
+}
+h2{
+    text-align: center;
+    padding-top: 50px;
+}
+
+header{
+    background-color: var(--regular_lila_sehr_hell);
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+}
+
+header ul{
+    list-style-type: none; 
+}
+
+header nav ul{
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;   
+}
+
+header nav ul li{
+    flex: 1;
+}
+a{
+    text-decoration: none;
+}
+.nav_link_design{
+    color: var(--text_black);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* main css */
+/* Hauptbild und Text */
+#container_img_hauptbild{
+    background-image: url('../resources/hauptbild_tisch.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+#container_text_hauptbild{
+    position: relative;
+    top: 50vh;
+    text-align: center;
+    background-color: var(--grey_transparent);
+    color: var(--text_white);
+}
+
+#container_text_hauptbild_headline{
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+/* Größe definieren für alle kommenden Bilder */
+.size_abstand_img{
+    width: 400px;
+    height: 300px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+/* Über uns */
+#container_profil{
+    background-color: var(--regular_lila_sehr_hell);
+} 
+
+#container_img_text_profil{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#container_img_profil img{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#container_text_profil{
+    width: 300px;
+    font-size: 16px;
+}
+
+/* Leistungen */
+.text_layout{
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-top: 15px;
+}
+
+.container_leistungen{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container_headline_text_leistungen{
+    width: 300px;
+}
+
+/* Anfahrt */
+#anfahrt_layout img{
+    padding-top: 50px;
+    width: 65vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Kontakt */
+
+#text_subheadline{
+    font-weight: 600;
+}
+
+#text_layout_kontakt{
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+#container_kontakt{
+    background-color: var(--regular_lila_sehr_hell);
+} 
+
+#container_formular_text_kontakt{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+#container_text_kontakt{
+    font-size: 16px;
+}
+
+.label_kontakt{
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.input_kontakt{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 30vw;
+    padding: 10px;
+}
+
+#button{
+    background-color: var(--regular_lila);
+    color: var(--text_white);
+    padding: 10px 2cqh;
+    border: 1px solid var(--regular_lila) ;
+    border-radius: 5%;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}
+
+footer{
+    height: 100px;
+    background-color: var(--regular_lila_dunkel);
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+}

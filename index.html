@@ -9,17 +9,140 @@
 
     <body>
         <header>
-
+            <h1>Dreamday Events</h1>  
+            <nav>
+                <ul>
+                    <li ><a class="nav_link_design" href="#profil">Über uns</a></li>
+                    <li><a class="nav_link_design" href="#leistungen">Leistungen</a></li>
+                    <li><a class="nav_link_design" href="#anfahrt">Anfahrt</li>
+                    <li><a class="nav_link_design" href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main>
+            <div id="container_img_hauptbild">
+                <div id="container_text_hauptbild">
+                    <div id="container_text_hauptbild_headline">
+                        Ihre Träume, perfekt geplant!
+                    </div>
+                    <div id="container_text_hauptbild_subheadline">
+                        Wir machen jeden Moment unvergesslich.
+                    </div>
+                </div>
+            </div>
+            
+            <section id="profil">
+                <div id="container_profil">
+                    <h2>Über uns</h2>
+                    <div id="container_img_text_profil">
+                        <div id="container_text_profil">
+                            Seit über 15 Jahren gestalten wir die schönsten Momente im Leben unserer Kunden.
+                            Von intimen Hochzeiten bis hin zu großen Firmenfeiern - wir sorgen für unvergessliche Erinnerungen.
+                        </div>
+                        <div id="container_img_profil">
+                            <img class="size_abstand_img" src="resources/profil.jpg">
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            
+            <section id="leistungen">
+                <div id="container_leistungen"></div>
+                    <h2>Unsere Leistungen</h2>
+                    <div id="container_leistungen_unterpunkte">
+                        <div class="container_leistungen">
+                            <div class="container_headline_text_leistungen">
+                                <h3>Hochzeitsplanung</h3>
+                                <div class="text_layout">
+                                    Von der ersten Idee bis zum Tanz - wir begleiten Sie durch jeden Moment Ihrer Traumhochzeit.
+                                    Individuell, persönlich und bis ins kleinste Detail durchdacht.
+                                </div>
+                            </div>
+                            <div>
+                                <img class="size_abstand_img" src="resources/leistungen_hochzeit.jpg">
+                            </div>
+                        </div>
+                        
+                        <div class="container_leistungen">
+                            <div>
+                                <img class="size_abstand_img" src="resources/leistungen_firmen.jpg">
+                            </div>
+                            <div class="container_headline_text_leistungen">
+                                <h3>Firmenfeiern</h3>
+                                <div class="text_layout">
+                                    Professionelle Planung von Firmenjubiläen, Weihnachtsfeiern oder Teambuilding-Events.
+                                    Wir schaffen den perfekten Rahmen für Ihr Unternehmen.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container_leistungen">
+                            <div class="container_headline_text_leistungen">
+                                <h3>Private Feiern</h3>
+                                <div class="text_layout">
+                                    Ob Geburtstag, Jubiläum oder Familienfeier - wir verwandeln Ihre Vision in Realität und kümmern uns um jedes Detail.
+                                </div>
+                            </div>
+                            <div>
+                                <img class="size_abstand_img" src="resources/leistungen_privat.jpg">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+         
+            <section id="anfahrt">
+                <h2>Hier finden Sie uns</h2>
+                <div id="anfahrt_layout">
+                    <img src="resources/anfahrt.png">
+                </div>
+            </section>
+
+            <section id="kontakt">
+                <div id="container_kontakt">
+                    <h2>Kontaktieren Sie uns</h2>
+                    <div id="container_formular_text_kontakt">
+                        <div id="container_text_kontakt">
+
+                            <div id="text_subheadline">
+                                Lassen Sie uns Ihre Träume verwirklichen
+                            </div>
+                            <div id="text_layout_kontakt">
+                            Wir freuen uns darauf, Ihre Vision kennzulernen. <br>
+                            Musterstraße 123<br>
+                            12345 Musterstadt<br>
+                            Tel: 0123 456789
+                            </div>
+                        </div>
+                        <div id="container_formular_kontakt">
+                            <form action="formular.php" method="post">
+
+                                <label class="label_kontakt">Name<br>
+                                    <input class="input_kontakt" type="text" name="name" placeholder="Ihr Name">
+                                </label><br>
+
+                                <label class="label_kontakt">E-Mail<br>
+                                    <input class="input_kontakt" type="email" name="mail" placeholder="ihre@email.de">
+                                </label><br>
+
+                                <label class="label_kontakt">Nachricht<br>
+                                <textarea class="input_kontakt" rows="8" placeholder="Ihre Nachricht"></textarea>
+                                </label><br>
+
+                                <input id="button" type="submit" value="Absenden">    
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
     </body>
 
     <footer>
-        
+        <h3>Dreamday Events</h3>
+
     </footer>
 
 </html>
