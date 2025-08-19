@@ -4,28 +4,46 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
        
 }
 /* Header css */
-h1, h2, h3{
+h1, h3{
     color: var(--regular_lila)
 }
-h2{
+
+#small_container{
+        display: none;
+    } 
+
+.sub_headlines{
     text-align: center;
     padding-top: 50px;
     padding-bottom: 30px;
+    color: var(--regular_lila)
 }
 
 header{
     background-color: var(--regular_lila_sehr_hell);
     display: flex;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 60px;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
     z-index: 1;
+}
+
+#nav_klein{
+    display: none;
+}
+
+#nav_groß{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
 }
 
 header ul{
@@ -36,6 +54,10 @@ header nav ul{
     display: flex;
     gap: 20px;
     white-space: nowrap;   
+}
+
+nav li{
+    list-style: none;
 }
 
 header nav ul li{
@@ -51,8 +73,8 @@ a:hover{
 }
 .nav_link_design{
     color: var(--text_black);
+    font-size: 12px;
     font-weight: 500;
-    font-size: 20px;
 }
 
 /* main css */
@@ -60,22 +82,27 @@ a:hover{
 #container_img_hauptbild{
     background-image: url('../resources/hauptbild_tisch.jpg');
     background-size: cover;
-    height: 100vh;
-    width: 100%;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #container_text_hauptbild{
-    position: relative;
-    top: 50vh;
+    position: static;
+    width: 100%;
     text-align: center;
     background-color: var(--grey_transparent);
     color: var(--text_white);
+    padding-top: 10px;
 }
 
-#container_text_hauptbild_headline{
-    font-size: 50px;
-    padding-bottom: 20px;
-    font-weight: 600;
+#p_headline{
+    padding-top: 10px;
+    font-size: 8px;
 }
+
 /* Größe definieren für alle kommenden Bilder */
 .size_abstand_img{
     width: 25vw;
@@ -115,6 +142,14 @@ a:hover{
 .container_leistungen{
     display: flex;
     width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container_leistungen_firmen{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -126,6 +161,7 @@ a:hover{
 /* Anfahrt */
 #anfahrt_layout img{
     padding-top: 20px;
+    padding-bottom: 50px;
     width: 64vw;
     display: block;
     margin-left: auto;
@@ -205,4 +241,486 @@ footer{
 #facebook_icon{
     width: 1.5vw;
     padding-left: 35vw;
+}
+
+@media (max-width: 319.9px){
+    
+    #small_container{
+        background-color: var(--grey_blue_transparent_container);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items:center ;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    header, main, footer{
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px){
+
+    h1{
+        font-size: 25px;
+    }
+
+    header{
+        background-color: var(--regular_lila_sehr_hell);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        z-index: 1;
+    }
+
+    #nav_groß{
+        display: none;
+    }
+
+    #nav_klein{
+        display: flex;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* main css */
+    /* Hauptbild und Text */
+    #container_img_hauptbild{
+        background-image: url('../resources/hauptbild_tisch.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #container_text_hauptbild{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--grey_transparent);
+        color: var(--text_white);
+        width: 100%;
+    }
+
+    /* Größe definieren für alle kommenden Bilder */
+    .size_abstand_img{
+        width: 80%;
+        height: auto;
+        padding-top: 0px;
+        border-radius: 20px;
+    }
+
+    .sub_headlines {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        color: var(--regular_lila);
+    }
+    /* Über uns */
+
+    #container_img_text_profil{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #container_img_profil{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    #container_img_profil img{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #container_text_profil{
+        font-size: 12px;
+        letter-spacing: 1px;
+        width: 80%;
+    }
+    /* Leistungen */
+    .text_layout{
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding-top: 15px;
+        width: 80%;
+    }
+
+    .container_leistungen{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container_headline_text_leistungen{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .container_img_leistungen{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;         
+    }
+
+    .container_leistungen_firmen{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+    }
+
+    /* Anfahrt */
+    
+    #anfahrt_layout{
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    #anfahrt_layout img{
+        width: 95%;
+        display: block;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    /* Kontakt */
+
+    #text_subheadline{
+        font-weight: 600;
+        padding-bottom: 5px;
+    }
+
+    #text_layout_kontakt{
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    #container_kontakt{
+        background-color: var(--regular_lila_sehr_hell);
+    } 
+
+    #container_formular_text_kontakt{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+
+    #container_text_kontakt{
+        font-size: 14px;
+    }
+    
+    /* Formular */
+    #container_formular_kontakt{
+        width: 100%;
+        padding-top: 30px;
+        
+    }
+
+    .label_kontakt{
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .input_kontakt{
+        margin-top: 5px;
+        margin-bottom: 15px;
+        width: 80%;
+        padding: 10px;
+    }
+
+    #button{
+        background-color: var(--regular_lila);
+        color: var(--text_white);
+        padding: 10px 2cqh;
+        border: 1px solid var(--regular_lila) ;
+        border-radius: 5%;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 50px;
+    }
+
+    #button:hover{
+        background-color: var(--regular_lila_hell_hover);
+        color: var(--text_black)
+    }
+
+    /* Footer */
+    #container_footer{
+        background-color: var(--regular_lila_dunkel);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+    }
+
+    #facebook_icon{
+        width: 5%;
+        padding-left: 0px;
+    }
+
+}
+@media (min-width: 601px) and (max-width: 900px){
+
+    h1{
+        font-size: 30px;
+    }
+
+    header{
+        background-color: var(--regular_lila_sehr_hell);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        z-index: 1;
+        padding: 0 20px;
+    }
+
+    #nav_groß{
+        display: none;
+    }
+
+    #nav_klein{
+        display: flex;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* main css */
+    /* Hauptbild und Text */
+    #container_img_hauptbild{
+        background-image: url('../resources/hauptbild_tisch.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #container_text_hauptbild{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--grey_transparent);
+        color: var(--text_white);
+        width: 100%;
+    }
+
+    /* Größe definieren für alle kommenden Bilder */
+    .size_abstand_img{
+        width: 80%;
+        height: auto;
+        padding-top: 0px;
+        border-radius: 20px;
+    }
+
+    .sub_headlines {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        color: var(--regular_lila);
+    }
+    /* Über uns */
+
+    #container_img_text_profil{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #container_img_profil{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    #container_img_profil img{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #container_text_profil{
+        font-size: 14px;
+        letter-spacing: 1px;
+        width: 80%;
+    }
+    /* Leistungen */
+    .text_layout{
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding-top: 15px;
+        width: 80%;
+    }
+
+    .container_leistungen{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container_headline_text_leistungen{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .container_img_leistungen{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;         
+    }
+
+    .container_leistungen_firmen{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+    }
+
+    /* Anfahrt */
+    
+    #anfahrt_layout{
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    #anfahrt_layout img{
+        width: 95%;
+        display: block;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    /* Kontakt */
+
+    #text_subheadline{
+        font-weight: 600;
+        padding-bottom: 5px;
+    }
+
+    #text_layout_kontakt{
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    #container_kontakt{
+        background-color: var(--regular_lila_sehr_hell);
+    } 
+
+    #container_formular_text_kontakt{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+
+    #container_text_kontakt{
+        font-size: 16px;
+    }
+    
+    /* Formular */
+    #container_formular_kontakt{
+        width: 100%;
+        padding-top: 30px;        
+    }
+
+    .label_kontakt{
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .input_kontakt{
+        margin-top: 5px;
+        margin-bottom: 15px;
+        width: 90%;
+        padding: 10px;
+    }
+
+    #button{
+        background-color: var(--regular_lila);
+        color: var(--text_white);
+        padding: 10px 2cqh;
+        border: 1px solid var(--regular_lila) ;
+        border-radius: 5%;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 50px;
+    }
+
+    #button:hover{
+        background-color: var(--regular_lila_hell_hover);
+        color: var(--text_black)
+    }
+
+    /* Footer */
+    #container_footer{
+        background-color: var(--regular_lila_dunkel);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+    }
+
+    #facebook_icon{
+        width: 5%;
+        padding-left: 0px;
+    }
 }
