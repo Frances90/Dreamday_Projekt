@@ -232,15 +232,15 @@ footer{
 #container_footer{
     background-color: var(--regular_lila_dunkel);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 50px;
 }
 
 #facebook_icon{
-    width: 1.5vw;
-    padding-left: 35vw;
+    width: 2%;
+    padding-left: 0px;
 }
 
 @media (max-width: 319.9px){
