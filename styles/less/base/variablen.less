@@ -1,0 +1,258 @@
+    /* Farben */
+    @text_white: #ffffff;
+    @text_black: #2c2533;
+    @regular_lila: #9f7ab0;
+    @regular_lila_hell_hover: #e8d3f2;
+    @regular_lila_dunkel: #4a4058;
+    @regular_lila_sehr_hell: #faf6fd;
+    @grey_transparent: rgba(15, 15, 15, 0.5);
+    
+    /* verschiedene Bildschirmgrößen */
+    @small: ~"(max-width: 319.9px)";
+    @mobile: ~"(min-width: 320px) and (max-width: 600px)";
+    @tablet: ~"(min-width: 601px) and (max-width: 900px)";
+
+    /* Abstände auf 0 setzen */
+    @margin: 0px;
+    @padding: 0px;
+
+    /* verschiedene Abstände definieren */
+    @padding_10: 10px;
+    @padding_15: 15px;
+    @padding_20: 20px;
+    @padding_30: 30px;
+    @padding_50: 50px;
+    @padding_5_5: 5px 5px;
+    @padding10_10: 10px 10px;
+
+    @margin_5: 5px;
+    @margin_15: 15px;
+    @margin_50: 50px;
+
+    /* verschiedene Breiten und Höhen */
+    @width_standard: 100%;
+    @width_25vw: 25vw;
+    @width_30vw: 30vw;
+    @width_80p: 80%;
+    @width_90p: 90%;
+    @width_95p: 95%;
+
+    @height_60: 60px;
+    @height_80vh: 80vh;
+
+    /* font-weight definieren */
+    @weight_600: 600;
+
+    /* font-size */
+    @font_8: 8px;
+    @font_10: 10px;
+    @font_12: 12px;
+    @font_14: 14px;
+    @font_16: 16px;
+    @font_25: 25px;
+    @font_30: 30px;
+
+    /* Layouts */
+    .flex_small_header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .flex_center_column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex_center_column_reverse {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex_center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex_center_column_start {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .flex_evenly_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .flex_evenly_fs_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+
+    .flex_around_center_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* einzelne Elemente definieren */
+
+    .size_abstand_img(@w, @h) {
+        width: @w;
+        height: @h;
+        border-radius: 15px;
+    }
+
+    .sub_headlines {
+        text-align: center;
+        padding-top: @padding_30;
+        padding-bottom: @padding_30;
+        color: @regular_lila;
+    }
+
+    .header_small {
+        .flex_around_center_row();
+        background-color: @regular_lila_sehr_hell;
+        position: fixed;
+        top: 0;
+        width: @width_standard;
+        height: @height_60;
+        z-index: 1;
+
+        nav {
+            #nav_groß {
+                display: none;
+            }
+
+            #nav_klein_img {
+                #nav_klein {
+                    display: flex;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    .profil_small(@font_size) {
+        #container_img_text_profil {
+            .flex_center_column();
+            width: @width_standard;
+
+            #container_text_profil {
+                width: @width_80p;
+                font-size: @font_size;
+                color: @text_black;
+                letter-spacing: 1px;
+                text-align: left;
+            }
+
+            #container_img_profil {
+                .flex_center_column();
+                padding-top: @padding_20;
+                padding-bottom: @padding_20;
+
+                img {
+                    .size_abstand_img (@width_80p, auto);
+                }
+            }
+        }
+    }
+
+    .leistungen_container(@font_size, @img_size) {
+
+        width: @width_standard;
+
+        .container_headline_text_leistungen {
+            width: @width_30vw;
+            text-align: left;
+
+            .text_layout {
+                font-size: @font_size;
+                letter-spacing: 1px;
+                padding-top: @padding_10;
+                color: @text_black;
+            }
+        }
+
+        .container_img_leistungen {
+            img {
+                .size_abstand_img (@img_size, auto);
+            }
+        }
+    }
+
+    .leistungen_container_small(@font_size, @img_size, @text_width) {
+
+        /*     width: @width_standard; */
+
+        .container_headline_text_leistungen {
+
+            .flex_center_column_start();
+            width: 80%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: left;
+
+            .text_layout {
+                font-size: @font_size;
+                letter-spacing: 1px;
+                padding-top: @padding_15;
+                color: @text_black;
+                width: @text_width;
+            }
+        }
+
+        .container_img_leistungen {
+            .flex_center_column();
+
+            img {
+                .size_abstand_img (@img_size, auto);
+            }
+        }
+    }
+    .anfahrt_img(@width){
+        #anfahrt_layout{
+            padding-top: @padding_20;
+            padding-bottom: @padding_50;
+        }
+
+        #anfahrt_layout img{
+            display: block;
+            width: @width;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .button_design{
+        #button{
+            background-color: @regular_lila;
+            color: @text_white;
+            padding: @padding10_10;
+            border: 1px solid @regular_lila ;
+            border-radius: 5%;
+            font-size: @font_12;
+            font-weight: @weight_600;
+            letter-spacing: 1px;
+            margin-bottom: @margin_50;
+                
+            &:hover{
+                background-color: @regular_lila_hell_hover;
+                color: @text_black;
+            }
+        }        
+    }

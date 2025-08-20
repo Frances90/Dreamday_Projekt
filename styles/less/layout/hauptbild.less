@@ -1,0 +1,21 @@
+#container_img_hauptbild{
+    background-image: url('/resources/hauptbild_tisch.jpg');
+    background-size: cover;
+    background-position: center;
+    height: @height_80vh;
+    .flex_center_column();
+
+    #container_text_hauptbild{
+    position: static;
+    width: @width_standard;
+    text-align: center;
+    background-color: @grey_transparent;
+    color: @text_white;
+    padding-top: @padding_10;
+
+        #p_headline{
+            padding-top: @padding_10;
+            font-size: @font_8;
+        }
+    }
+}

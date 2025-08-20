@@ -1,0 +1,48 @@
+.container_leistungen{
+    
+    .sub_headlines();
+    .flex_evenly_row();
+    .leistungen_container(@font_14, @width_25vw);
+
+}
+
+.container_leistungen_firmen{
+    .flex_evenly_row();
+    .leistungen_container(@font_14, @width_25vw);
+
+}
+
+@media @mobile{
+    
+    .container_leistungen{
+    
+        .sub_headlines();
+        .flex_center_column_reverse();
+        .leistungen_container_small(@font_12, @width_80p, @width_80p);
+
+    }
+
+    .container_leistungen_firmen{
+        .flex_center_column();
+        .leistungen_container_small(@font_12, @width_80p, @width_80p);
+    }
+
+}
+
+@media @tablet{
+    .container_leistungen{
+    
+        .sub_headlines();
+        .flex_center_column_reverse();
+        .leistungen_container_small(@font_14, @width_80p, @width_80p);
+
+    }
+
+    .container_leistungen_firmen{
+        .flex_center_column();
+        .leistungen_container_small(@font_14, @width_80p, @width_80p);
+    }
+
+}
+
+

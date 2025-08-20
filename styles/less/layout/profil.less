@@ -1,0 +1,47 @@
+#container_profil{
+    background-color: @regular_lila_sehr_hell;
+
+    .sub_headlines();
+
+    #container_img_text_profil{
+        .flex_evenly_row();
+        width: @width_standard;
+
+        #container_text_profil{
+            width: @width_30vw;
+            font-size: @font_16;
+            color: @text_black;
+            letter-spacing: 1px;
+            text-align: left;
+        }
+
+        #container_img_profil{
+            img{
+                .size_abstand_img (@width_25vw, auto);
+            }
+        }
+    }
+
+} 
+
+@media @mobile{
+
+    #container_profil{
+   
+        .profil_small(@font_12)
+
+    } 
+
+}
+
+@media @tablet{
+
+     #container_profil{
+   
+        .profil_small(@font_14)
+
+    }
+
+}
+
+
